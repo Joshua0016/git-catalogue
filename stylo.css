@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  /*margin: 0;*/
+}
+
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: rgb(255, 0, 13);
+  width: 100%;
+  padding: 20px;
+}
+
+.slider-description {
+  display: flex;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: rgb(255, 0, 13);
+  margin: 50px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider {
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.slider ul {
+  display: flex;
+  animation: cambio 10s infinite linear;
+  width: 370%;
+  gap: 58px;
+}
+
+.slider li {
+  width: 100%;
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  box-shadow: 2px 2px 15px;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0%;
+  }
+
+  20% {
+    margin-left: 0%;
+  }
+
+  25% {
+    margin-left: -93%;
+  }
+
+  45% {
+    margin-left: -93%;
+  }
+
+  50% {
+    margin-left: -188%;
+  }
+
+  70% {
+    margin-left: -188%;
+  }
+
+  75% {
+    margin-left: -280%;
+  }
+
+  100% {
+    margin-left: -280%;
+  }
+}
+
+.description {
+  font-size: 40px;
+  max-height: 200px;
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.description p {
+  color: rgb(150, 47, 47);
+}
+
+.titulo {
+  width: 300px;
+  height: 55px;
+
+  background-image: url("img/img1.gif");
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position-x: right;
+  box-shadow: 1px 1px 5px 1px;
+  border-radius: 5px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 35px;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 1px 1px 8px;
+  border-radius: 15px;
+}
+
+.selectbox {
+  width: 25%;
+  position: relative;
+  float: left;
+}
+
+.select {
+  background-color: white;
+  box-shadow: 0px 0px 0px rgb(0, 0, 0, 0.16);
+  /*ponemos la sombra en cero para usar transition más adelante*/
+  border-radius: 10px;
+  cursor: pointer;
+  /* el cursor cambia al estar sobre él*/
+  display: flex;
+  /* el flex para que se acomoden en fila*/
+  justify-content: space-between;
+  /* uso el space para que el icono y el titulo se repartan el espacio*/
+  align-items: center;
+  /*para centrarlo verticalmente*/
+  transition: 0.2s ease all;
+  margin-bottom: 30px;
+  padding: 20px;
+  position: relative;
+  max-height: 60px;
+  z-index: 200;
+  border: 2px solid transparent;
+}
+
+.select.active,
+.select:hover {
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.16);
+  border: 2px solid rgb(40, 40, 182);
+}
+
+.select.active::before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 10px solid rgb(40, 40, 182);
+  /*hago esto para simular un pequeño triangulo en la parte inferior*/
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  /*posiciono el triangulo justo en el borde inferior del selec*/
+  margin-left: calc(50% - 30px);
+  /* y lo centramos*/
+}
+
+.opciones {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.16);
+  height: 0px;
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  transition: 0.2s ease all;
+}
+
+.opciones.active {
+  height: 100px;
+}
+
+.contenido-opcion {
+  transition: 0.2s ease all;
+}
+
+.contenido-opcion:hover {
+  background-color: rgb(40, 40, 182);
+}
+
+.contenido-opcion:hover .tittle {
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.canvas {
+  border: 1px solid black;
+  display: block;
+
+}
+
+.content_canvas {
+  max-width: 1550px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Front_Image_Rear {
+  display: flex;
+  max-width: 750px;
+  justify-content: space-between;
+  margin: auto;
+}

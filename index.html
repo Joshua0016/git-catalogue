@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="StyleSheet" href="stylo.css" />
+    <script
+      src="https://kit.fontawesome.com/6fc84133e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--titulo-->
+    <title>Catalogue</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo">Catalogue</h1>
+    </header>
+    <div class="slider-description">
+      <div class="slider">
+        <ul>
+          <li>
+            <img src="img/honda.png" alt="honda" />
+          </li>
+          <li>
+            <img src="img/toyota.jpg" alt="toyota" />
+          </li>
+          <li>
+            <img src="img/mitsubishi.jpg" alt="mitsubishi" />
+          </li>
+          <li>
+            <img src="img/nissan.jpg" alt="nissan" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="description">
+        <p>Catalog of brake pads. Find the brakes for you vehicle</p>
+      </div>
+    </div>
+    <div class="contenedor">
+      <form id="form" class="form">
+        <!--primer selectbox-->
+        <div class="selectbox">
+          <div class="select" id="select">
+            <div class="contenido-select">
+              <h1 class="tittle">Select</h1>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <!--OPCIONES DEL SELECTBOX-->
+          <div class="opciones" id="opciones">
+            <!--con el enlace sabre en qué opcion ha echi click el usuario-->
+            <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                <div class="texto">
+                  <h2 class="title">Honda</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                <div class="texto">
+                  <h2 class="title">Nissan</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                <div class="texto">
+                  <h2 class="title">Mitsubishi</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                <div class="texto">
+                  <h2 class="title">Toyota</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!--segundo selectbox-->
+        <div class="selectbox">
+          <div class="select" id="select2">
+            <div class="contenido-select">
+              <h1 class="tittle">Select</h1>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <!--opciones del selectbox-->
+          <div class="opciones" id="opciones2">
+            <!--con el enlace sabre en qué opcion ha echi click el usuario-->
+            <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                <div class="texto">
+                  <h2 class="title"></h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!--tercer selectbox-->
+        <div class="selectbox">
+          <div class="select" id="select3">
+            <div class="contenido-select">
+              <h1 class="tittle">Select</h1>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <!--opciones del selectbox-->
+          <div class="opciones" id="opciones3">
+            <!--con el enlace sabre en qué opcion ha echi click el usuario-->
+            <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                <div class="texto">
+                  <h2 class="title"></h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <input type="hidden" name="Brand" id="inputSelect" value="" />
+        <input type="hidden" name="Model" id="inputSelect2" value="" />
+        <input type="hidden" name="Year" id="inputSelect3" value="" />
+      </form>
+    </div>
+
+    <div class="Front_Image_Rear">
+      <h2>Front</h2>
+      <h2>image</h2>
+      <h2>Rear</h2>
+    </div>
+    <div class="content_canvas">
+      <h2 id="ref1">Reference</h2>
+      <canvas class="canvas" id="canvas" width="600" height="400"></canvas>
+      <canvas class="canvas" id="canvas2" width="600" height="400"></canvas>
+      <h2 id="ref2">Reference</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="image.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
