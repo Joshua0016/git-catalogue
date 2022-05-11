@@ -40,7 +40,7 @@ document.querySelectorAll("#opciones > .opcion").forEach((opcion) => {
     ModelData(hiddenInput.value);
   });
 });
-//hola gente
+
 const brands = [
   {
     name: "Honda",
@@ -49,7 +49,8 @@ const brands = [
         name: "Accord",
         years: [
           {
-            year: "2017"
+            year: "2017",
+            image: "brakes/d1654.jpg"
           },
           {
             year: "2017 Sport touring"
@@ -158,6 +159,8 @@ function yearData(modeldata) {
 
 }
 
+
+
 //Evento select2
 function optionEvent2() {
   this.document.querySelectorAll("#opciones2 > div > .opcion").forEach(function (opcion) {
@@ -183,6 +186,8 @@ function optionEvent3() {
       select3.innerHTML = e.currentTarget.innerHTML;
       hiddenInput3.value = e.currentTarget.querySelector(".title").innerText;
       img(hiddenInput.value, hiddenInput2.value, hiddenInput3.value);
+      let selectedImage = selectedModel.years.find(image => image.year == hiddenInput3.value);
+      
     });
   });
 }
