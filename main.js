@@ -50,17 +50,96 @@ const brands = [
         years: [
           {
             year: "2017",
-            image: "brakes/d1654.jpg"
+            imageFront: "brakes/d1654.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-1654",
+            ref2: "D-1451/1336"
           },
           {
-            year: "2017 Sport touring"
+            year: "2017 Sport touring",
+            imageFront: "brakes/d1832.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-1832",
+            ref2: "D-1451/1336"
+
           },
           {
-            year: "2017-2016 LX-S"
+            year: "2017-2016 LX-S",
+            imageFront: "brakes/d1860.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-1860",
+            ref2: "D-1451/1336"
           },
           {
-            year: "2017-2014 LX"
+            year: "2017-2014 LX",
+            imageFront: "brakes/d914.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-914/958",
+            ref2: "D-1451/1336"
           },
+          {
+            year: "2016-2013 EX",
+            imageFront: "brakes/d1654.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-1654",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2012-2011 EX",
+            imageFront: "brakes/d1506.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-1506",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2012-2011 LX",
+            imageFront: "brakes/d914.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-914/958",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2010 EX",
+            imageFront: "brakes/d787.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-787",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2010 LX",
+            imageFront: "brakes/d914.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-914/958",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2009-2008 EX",
+            imageFront: "brakes/d787.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-787",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2009-2008 LX",
+            imageFront: "brakes/d914.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-914/958",
+            ref2: "D-1451/1336"
+          },
+          {
+            year: "2007-2004 4 Cyl",
+            imageFront: "brakes/d914.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-914/958",
+            ref2: "D-537"
+          },
+          {
+            year: "2007-2004 6 Cyl",
+            imageFront: "brakes/d959.jpg",
+            imageRear: "brakes/d1451.jpg",
+            ref1: "D-959",
+            ref2: "D-537"
+          }
         ]
 
       },
@@ -140,7 +219,7 @@ const generateOption2 = (name) =>
 function yearData(modeldata) {
   if (modeldata == "Accord") {
     $("#select3").bind("click", () => {
-
+      Years.innerHTML = "";
       select3.classList.toggle("active");
       opciones3.classList.toggle("active");
 
@@ -187,7 +266,7 @@ function optionEvent3() {
       hiddenInput3.value = e.currentTarget.querySelector(".title").innerText;
       img(hiddenInput.value, hiddenInput2.value, hiddenInput3.value);
       let selectedImage = selectedModel.years.find(image => image.year == hiddenInput3.value);
-      
+      img(selectedImage);
     });
   });
 }
